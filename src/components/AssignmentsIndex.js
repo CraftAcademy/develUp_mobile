@@ -16,7 +16,7 @@ const AssignmentsIndex = () => {
 
   return (
     <View style={styles.container}>
-      <Text>Welcome to DevelUp</Text>
+      <Text testID="welcome-message">Welcome to DevelUp</Text>
       <FlatList
         data={assignments}
         keyExtractor={(assignment) => assignment.id.toString()}

@@ -1,22 +1,21 @@
 const { reloadApp } = require('detox-expo-helpers')
 
-describe('Example', () => {
-  beforeEach(async () => {
+describe('App', () => {
+  beforeAll(async () => {
     // await device.reloadReactNative();
     await reloadApp()
+    // await timeout(1000)
   });
 
-  it('is expected to have text on screen', async () => {
-    // await expect(element(by.id('welcome'))).toBeVisible();
-    await expect(element(by.text('Welcome to DevelUp'))).toBeVisible();
+  it('is expected to have elements identifiable by testID', async () => {
+    await expect(element(by.id('welcome-message'))).toBeVisible();
   });
 
-  xit('should show hello screen after tap', async () => {
-    await element(by.id('hello_button')).tap();
+  it('is expected to have have elements identifiable by label (text)', async () => {
+    await expect(element(by.label('Welcome to DevelUp'))).toBeVisible();
   });
 
-  xit('should show world screen after tap', async () => {
-    await element(by.id('world_button')).tap();
-    await expect(element(by.text('World!!!'))).toBeVisible();
+  it('is expected to have elements identifiable by testID and assert label', async () => {
+    await expect(element(by.id('welcome-message'))).toHaveLabel('Welcome to DevelUp');
   });
 });
