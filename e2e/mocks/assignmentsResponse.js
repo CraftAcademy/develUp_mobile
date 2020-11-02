@@ -1,4 +1,4 @@
-{
+const assignments = {
   "assignmets": [
     {
       "id": 1,
@@ -16,3 +16,5 @@
     }
   ]
 }
+
+exports.module = assignments 

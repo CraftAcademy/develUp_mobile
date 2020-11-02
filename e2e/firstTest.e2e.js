@@ -1,10 +1,12 @@
 const { reloadApp } = require('detox-expo-helpers')
+const assignments = require('./mocks/assignmentsResponse');
+// const nock = require('nock')
+
 
 describe('App', () => {
   beforeAll(async () => {
-    // await device.reloadReactNative();
+    console.log(JSON.stringify(assignments))
     await reloadApp()
-    // await timeout(1000)
   });
 
   it('is expected to have elements identifiable by testID', async () => {
