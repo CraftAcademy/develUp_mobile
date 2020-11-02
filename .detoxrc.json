@@ -4,17 +4,8 @@
   "configurations": {
     "ios": {
       "type": "ios.simulator",
-      "binaryPath": "SPECIFY_PATH_TO_YOUR_APP_BINARY",
-      "device": {
-        "type": "iPhone 11"
-      }
-    },
-    "android": {
-      "type": "android.emulator",
-      "binaryPath": "SPECIFY_PATH_TO_YOUR_APP_BINARY",
-      "device": {
-        "avdName": "Pixel_2_API_29"
-      }
+      "binaryPath": "bin/Exponent.app",
+      "name": "iPhone 11"
     }
   }
 }
