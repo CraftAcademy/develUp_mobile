@@ -3,7 +3,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import AssignmentsIndex from "./src/components/AssignmentsIndex";
 
-const Stack = createStackNavigator(); 
+const Stack = createStackNavigator();
 
 const App = () => {
   return (
