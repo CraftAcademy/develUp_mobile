@@ -10,6 +10,7 @@ const AssignmentsIndex = () => {
     const getAssignmentsIndex = async () => {
       const response = await Assignments.index();
       setAssignments(response);
+      console.table(response)
     };
     getAssignmentsIndex();
   }, []);
@@ -17,6 +18,7 @@ const AssignmentsIndex = () => {
   return (
     <View style={styles.container}>
       <Text testID="welcome-message">Welcome to DevelUp</Text>
+      { assignments && <Text testID="welcome-message-2">assignments loaded</Text>}
       <FlatList
         data={assignments}
         keyExtractor={(assignment) => assignment.id.toString()}

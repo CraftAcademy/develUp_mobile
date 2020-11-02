@@ -1,11 +1,8 @@
 const { reloadApp } = require('detox-expo-helpers')
-const assignments = require('./mocks/assignmentsResponse');
-// const nock = require('nock')
 
 
 describe('App', () => {
-  beforeAll(async () => {
-    console.log(JSON.stringify(assignments))
+  beforeEach(async () => {
     await reloadApp()
   });
 
