@@ -3,14 +3,14 @@ import { View, Text, StyleSheet, FlatList } from "react-native";
 import AssignmentCard from "./AssignmentCard";
 import Assignments from '../modules/assignments'
 
+
 const AssignmentsIndex = () => {
   const [assignments, setAssignments] = useState([]);
 
   useEffect(() => {
     const getAssignmentsIndex = async () => {
-      const response = await Assignments.index();
-      setAssignments(response);
-      console.table(response)
+      const data = await Assignments.index();
+      setAssignments(data);
     };
     getAssignmentsIndex();
   }, []);
