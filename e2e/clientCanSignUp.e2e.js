@@ -13,7 +13,7 @@ describe("Client can sign up", () => {
     await element(by.id("passwordLabel")).tap();
     await element(by.id("passwordInput")).typeText("password");
     await element(by.id("passwordConfirmationLabel")).tap();
-    await element(by.id("passwordConfirmationInput")).typeText("password");
+    await element(by.id("passwordConfirmationInput")).tap().typeText("password");
     await element(by.id("companyNameLabel")).tap();
     await element(by.id("companyNameInput")).typeText("develup");
     await element(by.id("companyUrlLabel")).tap();

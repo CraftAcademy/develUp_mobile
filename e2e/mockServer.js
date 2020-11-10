@@ -26,4 +26,5 @@ const mockServer = {
   }
 }
 
-exports.mockServer = mockServer
+// exports.mockServer = mockServer
+export default mockServer
