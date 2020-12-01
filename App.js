@@ -10,6 +10,8 @@ import Login from "./src/components/Login";
 import { useSelector } from "react-redux";
 import HeaderButtons from "./src/components/HeaderButtons";
 import DeveluperPage from "./src/components/DeveluperPage";
+import DeveluperSubscription from "./src/components/DeveluperSubscription";
+import DeveluperSignup from './src/components/DeveluperSignup'
 
 const Stack = createStackNavigator();
 
@@ -31,6 +33,7 @@ const App = () => {
           headerRight: () => <HeaderButtons {...props} />,
         })}
       >
+        
         <Stack.Screen name="develUp" component={AssignmentsIndex} />
         <Stack.Screen name="singleAssignment" component={SingleAssignment} />
         {authenticated ? (
@@ -38,11 +41,13 @@ const App = () => {
             <Stack.Screen name="clientPage" component={ClientPage} />
             <Stack.Screen name="develuperPage" component={DeveluperPage} />
             <Stack.Screen name="assignmentForm" component={AssignmentForm} />
+            <Stack.Screen name="develuperSubscription" component={DeveluperSubscription} />
           </>
         ) : (
           <>
             <Stack.Screen name="login" component={Login} />
             <Stack.Screen name="clientSignUp" component={ClientSignUp} />
+          <Stack.Screen name="develuperSignup" component={DeveluperSignup} />
           </>
         )}
       </Stack.Navigator>
